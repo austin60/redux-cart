@@ -1,0 +1,51 @@
+[
+        {
+            "_id":"dress1",
+            "title":"first dress",
+            "description":"It is fetch that can failracking branch  or was the branch rewound in remote repository",
+            "image":"https://www.wikihow.com/images/thumb/d/d5/Be-Random-Step-8.jpg/v4-460px-Be-Random-Step-8.jpg.webp",
+            "availableSizes":["XL","L"],
+            "price":65
+        },
+        {
+            "_id":"dress2",
+            "title":"second dress",
+            "description":"That's because Git can't merge the changes from the branches into your current master",
+            "image":"https://pbs.twimg.com/profile_images/1075174181262761984/NAYt8b06_400x400.jpg",
+            "availableSizes":["XXL","XL","L"],
+            "price":37
+        },
+        {
+            "_id":"dress3",
+            "title":"third dress",
+            "description":"Normally, remotes are set up such that fetches are forced,they don't result in a fast-forward commit",
+            "image":"https://s.clipartkey.com/mpngs/s/9-93147_animal-clipart-animals-cartoon-collection-clip-art-cartoon.png",
+            "availableSizes":["SM","XL","L"],
+            "price":63
+        },
+        {
+            "_id":"dress4",
+            "title":"fourth dress",
+            "description":"Git tells me there's nothing to do. When I try to commit, it falls over moaning about fast-forwards",
+            "image":"https://www.wikihow.com/images/thumb/d/d5/Be-Random-Step-8.jpg/v4-460px-Be-Random-Step-8.jpg.webp",
+            "availableSizes":["XL","L"],
+            "price":46
+        },
+        {
+            "_id":"dress5",
+            "title":"fifth dress",
+            "description":"Simply track your remote branches explicitly and a simple git pull will do just what you want",
+            "image":"https://www.jing.fm/clipimg/detail/289-2897389_clip-art.png",
+            "availableSizes":["XXL","XL","L","SM"],
+            "price":43
+        },
+        {
+            "_id":"dress6",
+            "title":"sixth dress",
+            "description":"I'm downvoting this because it attempts to merge the remote branch into your current branch",
+            "image":"http://newnation.sg/wp-content/uploads/random-pic-internet-22.jpg",
+            "availableSizes":["XXL","XL","L","SM"],
+            "price":54
+        }
+    ]
+

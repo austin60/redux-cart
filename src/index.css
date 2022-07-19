@@ -11,9 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .main{
   width:98vw;
   height:87vh;
+  display: flex;
 }
 .footer{
   width: 100%;
@@ -22,4 +24,33 @@ code {
   display: flex;
   justify-content: center;
   font-size: 13px;
+}
+.main-products{
+  width:75%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.side-bar{
+  width:25%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(213, 216, 222);
+}
+.card{
+  width: 150px;
+  height:200px;
+  margin:10px;
+
+}
+.product-image{
+  height:70%;
+  width:100%;
+  background: brown;
+}
+img{
+  height: 100%;
+  width: 100%;
 }
