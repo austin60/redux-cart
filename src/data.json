@@ -1,10 +1,11 @@
-[
+{
+    "products":[
         {
             "_id":"dress1",
             "title":"first dress",
             "description":"It is fetch that can failracking branch  or was the branch rewound in remote repository",
             "image":"https://www.wikihow.com/images/thumb/d/d5/Be-Random-Step-8.jpg/v4-460px-Be-Random-Step-8.jpg.webp",
-            "availableSizes":["XL","L"],
+            "availableSizes":["XL","L","M"],
             "price":65
         },
         {
@@ -12,7 +13,7 @@
             "title":"second dress",
             "description":"That's because Git can't merge the changes from the branches into your current master",
             "image":"https://pbs.twimg.com/profile_images/1075174181262761984/NAYt8b06_400x400.jpg",
-            "availableSizes":["XXL","XL","L"],
+            "availableSizes":["XXL","XL"],
             "price":37
         },
         {
@@ -28,7 +29,7 @@
             "title":"fourth dress",
             "description":"Git tells me there's nothing to do. When I try to commit, it falls over moaning about fast-forwards",
             "image":"https://www.wikihow.com/images/thumb/d/d5/Be-Random-Step-8.jpg/v4-460px-Be-Random-Step-8.jpg.webp",
-            "availableSizes":["XL","L"],
+            "availableSizes":["XL","S"],
             "price":46
         },
         {
@@ -48,4 +49,4 @@
             "price":54
         }
     ]
-
+}

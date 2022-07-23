@@ -1,35 +1,62 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import data from './data.json'
-import Card from './components/card';
-import { useState } from 'react';
+import React from 'react';
+import Products from './components/card';
+import Sort from './components/sort';
 
-function App() {
- const[state]=useState({data});
- const products=state.data
-//console.log(products)
- //const {_id,title,price}=product[0];
- //console.log(_id);=dress1
+
+
+class App extends React.Component {
+  state={
+    products:data.products,
+    size:"",
+    sort:""
+  }
+  changeSize=(e)=>{
+  if(e.target.value===" "){
+    this.setState({
+      products:data.products,
+      size:""
+    })
+  }
+  else{
+    this.setState({size: e.target.value,
+      products:data.products.filter(product=>product.availableSizes.indexOf(e.target.value)>=0)})
+  }
+  
+  }
+  changeSort=(e)=>{
+    this.setState ({sort:e.target.value})
+   }
+  
+render(){
   return (
     <div className="App">
-     <div className='container-fluid'>
-       <nav className="navbar navbar-light bg-light">
-           <div className="container-fluid">
-              <span>Thrift Store</span>
-           </div>
-       </nav>
+      <div className='main'>
+        <nav className="navbar navbar-light bg-light">
+          <div className="container-fluid">
+             <span className="navbar-brand mb-0 h1">Shop</span>
+          </div>
+        </nav>
 
-       <div className='main'>
-        <div className='main-products'>
-          <Card products={products}/>
-        </div>
-        <div className='side-bar'></div>
+        <div className='content'>
+         <div className='product-section'>
+          <Sort products={this.state.products}
+                sort={this.state.sort}
+                size={this.state.size}
+                handleSize={this.changeSize}
+                handleSort={this.changeSort}/>
+          <Products products={this.state.products}/>
+         </div>
+         <div className='right-section'></div>
        </div>
-
-       <div className='footer'>all rights reserved</div>
      </div>
-    </div>
+  </div>
+
   );
+ }
+
 }
 
 export default App;
