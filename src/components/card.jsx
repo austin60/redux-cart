@@ -13,7 +13,7 @@ class Products extends React.Component{
             <div className="product-content">
               <div className="title"> {product.title}</div>
               <div className="price">${product.price}</div>
-              <button className='btn btn-primary'>view</button>
+              <button className='btn btn-secondary' onClick={()=>this.props.addToCart(product)}>Add</button>
             </div>
           </div>
         ))}

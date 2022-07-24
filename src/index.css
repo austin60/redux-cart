@@ -34,7 +34,7 @@ code {
   
 }
 .right-section{
-  height: 100%;
+  min-height: 100vh;
   width: 30%;
   background:rgb(205, 205, 209);
   
@@ -62,4 +62,29 @@ img{
 .product-content{
 display: flex;
 flex-direction: column;
+}
+.item{
+  height: 70px;
+  width: 85%;
+  display:flex;
+  background: white;
+  margin:5px;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-image{
+  height:100%;
+  width:20%
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+.item-detail{
+  padding: 2px;
+}
+.item-total{
+  display:flex;
+  width: 100%;
+  justify-content: space-evenly;
 }

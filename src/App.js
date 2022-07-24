@@ -4,6 +4,7 @@ import data from './data.json'
 import React from 'react';
 import Products from './components/card';
 import Sort from './components/sort';
+import Cart from './components/cart';
 
 
 
@@ -11,13 +12,15 @@ class App extends React.Component {
   state={
     products:data.products,
     size:"",
-    sort:""
+    sort:"",
+    cartItem:[]
   }
   changeSize=(e)=>{
   if(e.target.value===" "){
     this.setState({
       products:data.products,
       size:""
+      
     })
   }
   else{
@@ -27,8 +30,41 @@ class App extends React.Component {
   
   }
   changeSort=(e)=>{
-    this.setState ({sort:e.target.value})
+    const sort=e.target.value;
+    this.setState((state)=>({
+      sort:sort,
+      products:this.state.products.slice().sort((a,b)=>(
+        sort==="lowest"?
+        ((a.price<b.price)?1:-1):
+        sort==="highest"?
+        ((a.price<b.price)?1:-1):
+        ((a._id<b._id)?1:-1)
+      ))
+    }))
    }
+//handle cart items
+   handleAddCart=(product)=>{
+    const cartItem=this.state.cartItem.slice();
+    let alreadyInCart=false;
+
+  cartItem.forEach(item => {
+    if(item._id===product._id){
+      item.count++;
+      alreadyInCart=true;
+    }
+  });
+
+   if(!alreadyInCart){
+    cartItem.push({...product,count:1})
+   }
+   this.setState({cartItem})
+  }
+  //delete items from cart
+  handleCartDelete=(product)=>{
+    const cartItem=this.state.cartItem.slice();
+    this.setState({cartItem:cartItem.filter(cItem=>cItem._id!==product._id)})
+    
+  }
   
 render(){
   return (
@@ -47,9 +83,14 @@ render(){
                 size={this.state.size}
                 handleSize={this.changeSize}
                 handleSort={this.changeSort}/>
-          <Products products={this.state.products}/>
+          <Products products={this.state.products}
+                    addToCart={this.handleAddCart}/>
          </div>
-         <div className='right-section'></div>
+         <div className='right-section'>
+  
+         <Cart cartItem={this.state.cartItem}
+               removeItem={this.handleCartDelete}/>
+         </div>
        </div>
      </div>
   </div>
