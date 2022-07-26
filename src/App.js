@@ -13,7 +13,7 @@ class App extends React.Component {
     products:data.products,
     size:"",
     sort:"",
-    cartItem:[]
+    cartItem:localStorage.getItem("cartItem")?JSON.parse(localStorage.getItem("cartItem")):[]
   }
   changeSize=(e)=>{
   if(e.target.value===" "){
@@ -58,12 +58,13 @@ class App extends React.Component {
     cartItem.push({...product,count:1})
    }
    this.setState({cartItem})
+   localStorage.setItem("cartItem",JSON.stringify(cartItem))
   }
   //delete items from cart
   handleCartDelete=(product)=>{
     const cartItem=this.state.cartItem.slice();
     this.setState({cartItem:cartItem.filter(cItem=>cItem._id!==product._id)})
-    
+    localStorage.setItem("cartItem",JSON.stringify(cartItem.filter(cItem=>cItem._id!==product._id)))
   }
   
 render(){
