@@ -1,0 +1,52 @@
+{
+    "products":[
+        {
+            "_id":"dress1",
+            "title":"first dress",
+            "description":"It is fetch that can failracking branch  or was the branch rewound in remote repository",
+            "image":"https://www.na-kd.com/globalassets/nakd_chiffon_halterneck_draped_mini_dress-1017-001630-0002_057448.jpg?ref=B65269FA41",
+            "availableSizes":["XL","L","M"],
+            "price":65
+        },
+        {
+            "_id":"dress2",
+            "title":"second dress",
+            "description":"That's because Git can't merge the changes from the branches into your current master",
+            "image":"https://www.na-kd.com/globalassets/nakd_draped_linen_dress-1018-007096-0092_01c_1.jpeg?ref=291D161ACE",
+            "availableSizes":["XXL","XL"],
+            "price":37
+        },
+        {
+            "_id":"dress3",
+            "title":"third dress",
+            "description":"Normally, remotes are set up such that fetches are forced,they don't result in a fast-forward commit",
+            "image":"https://img.promgirl.com/_img/PGPRODUCTS/2410471/320/neptune-dress-PG-22-F2207-a.jpg",
+            "availableSizes":["SM","XL","L"],
+            "price":63
+        },
+        {
+            "_id":"dress4",
+            "title":"fourth dress",
+            "description":"Git tells me there's nothing to do. When I try to commit, it falls over moaning about fast-forwards",
+            "image":"https://dazedimg-dazedgroup.netdna-ssl.com/1080/azure/dazed-prod/1290/5/1295031.jpg",
+            "availableSizes":["XL","S"],
+            "price":46
+        },
+        {
+            "_id":"dress5",
+            "title":"fifth dress",
+            "description":"Simply track your remote branches explicitly and a simple git pull will do just what you want",
+            "image":"https://www.na-kd.com/globalassets/nakd_draped_linen_dress-1018-007096-00681070_01c.jpg?ref=63C3874C42",
+            "availableSizes":["XXL","XL","L","SM"],
+            "price":43
+        },
+        {
+            "_id":"dress6",
+            "title":"sixth dress",
+            "description":"I'm downvoting this because it attempts to merge the remote branch into your current branch",
+            "image":"https://cdn.forcast.com.au/media/catalog/product/cache/07426fd1f727adbbafc671d5c3762bb2/d/r/dr1111emd_first_cm_1.jpg",
+            "availableSizes":["XXL","XL","L","SM"],
+            "price":54
+        }
+    ]
+}
