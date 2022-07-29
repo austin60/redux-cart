@@ -66,6 +66,9 @@ class App extends React.Component {
     this.setState({cartItem:cartItem.filter(cItem=>cItem._id!==product._id)})
     localStorage.setItem("cartItem",JSON.stringify(cartItem.filter(cItem=>cItem._id!==product._id)))
   }
+  createOrder=(order)=>{
+    alert(`save ${order.name}'s name`)
+  }
   
 render(){
   return (
@@ -90,7 +93,8 @@ render(){
          <div className='right-section'>
   
          <Cart cartItem={this.state.cartItem}
-               removeItem={this.handleCartDelete}/>
+               removeItem={this.handleCartDelete}
+               createOrder={this.createOrder}/>
          </div>
        </div>
      </div>
