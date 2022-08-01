@@ -1,5 +1,6 @@
 {
   "name": "cart",
+  "proxy": "http://localhost:5000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,8 +16,12 @@
     "react-awesome-reveal": "^3.8.1",
     "react-dom": "^18.2.0",
     "react-modal": "^3.15.1",
+    "react-redux": "^8.0.2",
     "react-reveal": "^1.2.2",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
     "shortid": "^2.2.16",
     "web-vitals": "^2.1.4"
   },
